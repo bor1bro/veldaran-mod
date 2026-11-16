@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "veldaranmod:block/deepslate_vel_ore_block"
+  }
+}
