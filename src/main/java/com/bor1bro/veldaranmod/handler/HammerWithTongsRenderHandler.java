@@ -11,10 +11,13 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RenderHandEvent;
 
-public class DualWieldRenderHandler {
+@EventBusSubscriber(modid = "veldaranmod", value = Dist.CLIENT)
+public class HammerWithTongsRenderHandler {
     @SubscribeEvent
     public static void onRenderHand(RenderHandEvent event) {
         LocalPlayer player = Minecraft.getInstance().player;

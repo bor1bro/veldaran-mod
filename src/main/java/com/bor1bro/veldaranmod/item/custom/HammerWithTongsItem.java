@@ -22,7 +22,7 @@ public class HammerWithTongsItem extends Item{
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        if (context.getPlayer().getOffhandItem().is(ModItems.HAMMER_WITH_TONGS)) return super.useOn(context);
+        if (context.getPlayer().getOffhandItem().is(ModItems.HAMMER_WITH_TONGS)) return InteractionResult.PASS;
 
         Level level = context.getLevel();
         Block clickedBlock = level.getBlockState(context.getClickedPos()).getBlock();
@@ -44,8 +44,10 @@ public class HammerWithTongsItem extends Item{
                         context.getClickedPos().getZ() + 0.5,
                         new ItemStack((ItemLike) ModItems.ROUGH_VEL, 1)));
             }
+            return InteractionResult.SUCCESS;
         }
-
-        return super.useOn(context);
+        return InteractionResult.PASS;
     }
+
+
 }

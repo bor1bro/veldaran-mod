@@ -25,7 +25,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ROUGH_VEL);
                         output.accept(ModItems.VEL);
                         output.accept(ModItems.VEL_SHARDS);
+                        output.accept(ModItems.VEL_DUST);
                         output.accept(ModItems.HAMMER_WITH_TONGS);
+                        output.accept(ModBlocks.CRYSTAL_CUTTER_BLOCK);
+                        output.accept(ModItems.VEL_PUMPKIN_PIE);
+                        output.accept(ModItems.BIOMASS);
+                        output.accept(ModBlocks.BIOMASS_BLOCK);
                     }
                     ).build());
 

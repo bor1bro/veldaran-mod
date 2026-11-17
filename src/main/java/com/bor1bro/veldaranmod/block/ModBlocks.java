@@ -1,6 +1,8 @@
 package com.bor1bro.veldaranmod.block;
 
 import com.bor1bro.veldaranmod.VeldaranMod;
+import com.bor1bro.veldaranmod.block.custom.BiomassBlock;
+import com.bor1bro.veldaranmod.block.custom.CrystalCutterBlock;
 import com.bor1bro.veldaranmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -28,6 +30,11 @@ public class ModBlocks {
     public static final DeferredBlock<Block> EMPTY_DEEPSLATE_VEL_ORE_BLOCK = registerBlock("empty_deepslate_vel_ore_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final DeferredBlock<Block> CRYSTAL_CUTTER_BLOCK = registerBlock("crystal_cutter_block",
+            () -> new CrystalCutterBlock(BlockBehaviour.Properties.of()
+                    .strength(2).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> BIOMASS_BLOCK = registerBlock("biomass_block",
+            () -> new BiomassBlock(BlockBehaviour.Properties.of().strength(0.25f).sound(SoundType.MUD)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
